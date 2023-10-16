@@ -1,27 +1,9 @@
-# React + TypeScript + Vite
+# Todo app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Todo task tracking and management app that is inspired from issues faced when doing my intern.
 
-Currently, two official plugins are available:
+I found tracking epics and its requirements difficult, especially with excel. What I had to do was break down epics into features, features into requirements, requirements into its detailed steps. I found this nesting really hard to visualize with excel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+While arranging them similar to folders structure will be a better option, this application aims to display folder structures in a more elegant way... or something.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Look, can I use some current note taking app as a substitute for excel and save me however long to make my own one? Yes, yes I can. Leave me alone, I just want to make something I thought is cool.

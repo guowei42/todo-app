@@ -6,7 +6,7 @@ import TodoDetails from "./components/TodoDetails";
 const TodoContent = () => {
     return (
         <Layout>
-            <Row>
+            <Row style={{minHeight: "100vh"}}>
                 <Col span={8} style={{border: "1px solid red"}}>
                     <Content><TodoList/></Content>
                 </Col>
