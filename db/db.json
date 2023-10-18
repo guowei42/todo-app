@@ -1,0 +1,21 @@
+{
+    "Roots": [
+        {
+            "id": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
+            "title": "House Listing"
+        },
+        {
+            "id": "22a36016-88c1-48b0-83da-c078ec1c416b",
+            "title": "House Details"
+        },
+        {
+            "id": "98f33552-bf02-453b-84d5-2bf99b6a3f49",
+            "title": "House Payment"
+        }
+    ],
+    "Children": [
+        {
+            "id": "9aeebd10-98f8-4796-af75-7a4751793bcc"
+        }
+    ]
+}
