@@ -1,21 +1,48 @@
 {
-    "Roots": [
+    "TodoInfo": [
         {
             "id": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
-            "title": "House Listing"
+            "parent": "",
+            "title":"Project Housing",
+            "summary": "",
+            "details": ""
         },
         {
             "id": "22a36016-88c1-48b0-83da-c078ec1c416b",
-            "title": "House Details"
+            "parent": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
+            "title":"House Listing",
+            "summary": "",
+            "details": ""
         },
         {
             "id": "98f33552-bf02-453b-84d5-2bf99b6a3f49",
-            "title": "House Payment"
-        }
-    ],
-    "Children": [
+            "parent": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
+            "title":"House Details",
+            "summary": "",
+            "details": ""
+        },
         {
-            "id": "9aeebd10-98f8-4796-af75-7a4751793bcc"
+            "id": "9aeebd10-98f8-4796-af75-7a4751793bcc",
+            "parent": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
+            "title":"House Payment",
+            "summary": "",
+            "details": ""
+        },
+        {
+            "id": "e8c65813-c549-46aa-a829-00ae130169e5",
+            "parent": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
+            "title":"Floor Plans",
+            "summary": "",
+            "details": ""
+        },
+        {
+            "id": "bc9b27b6-6cac-4ce0-bc57-930d268e85e5",
+            "parent": "22a36016-88c1-48b0-83da-c078ec1c416b",
+            "title":"Area Plots",
+            "summary": "",
+            "details": ""
         }
     ]
+
+
 }
