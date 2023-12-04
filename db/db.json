@@ -4,14 +4,14 @@
             "id": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
             "parent": "",
             "title":"Project Housing",
-            "summary": "",
+            "summary": "displays housing stats",
             "details": "this project involves performing data stats for housing information \n - idea 1 \n - idea 2 \n \n - idea 4"
         },
         {
             "id": "3cad4b18-47b7-4591-b94e-1d32073649da",
             "parent": "",
             "title":"Twitter Web Game",
-            "summary": "",
+            "summary": "simple web guessing game",
             "details": ""
         },
         {

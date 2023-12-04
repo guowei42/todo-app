@@ -1,13 +1,11 @@
-import { Layout } from "antd";
-import { Content } from "antd/es/layout/layout";
+import { HomeOutlined } from "@ant-design/icons";
+import { Layout} from "antd";
 import { Outlet } from "react-router";
 
 const App = () => {
     return (
         <Layout style={{ minHeight: "100vh" }}>
-            <Content>
-                <Outlet/>
-            </Content>
+            <Outlet />
         </Layout>
     );
 };

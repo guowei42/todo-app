@@ -1,25 +1,31 @@
 import { Button, Col, Layout, Row } from "antd";
-import { Content, Footer } from "antd/es/layout/layout";
-import TodoList from "./components/TodoList";
+import { Content, Footer, Header } from "antd/es/layout/layout";
+import { Key } from "react";
+import { useNavigate, useParams } from "react-router";
 import TodoDetails from "./components/TodoDetails";
-import { useParams } from "react-router";
+import TodoList from "./components/TodoList";
 
 const TodoContent = () => {
-    let { id} = useParams();
-    console.log(id);
+    let { id } = useParams();
+    const navigate = useNavigate();
+
+    const gotoHome = () => navigate("/");
 
     return (
-        <Layout>
+        <Content>
             <Row style={{ minHeight: "100vh" }}>
                 <Col span={16} style={{ borderRight: "2px dashed black" }}>
+                    <Header style={{ background: "white" }}>
+                        <Button onClick={gotoHome}>Home</Button>
+                    </Header>
                     <Content style={{ height: "100%", padding: "15px" }}>
-                        <TodoDetails id={id}/>
+                        <TodoDetails id={id as Key} />
                     </Content>
                 </Col>
                 <Col span={8}>
                     <Layout style={{ height: "100%" }}>
                         <Content>
-                            <TodoList />
+                            <TodoList id={id as Key} />
                         </Content>
                         <Footer>
                             <Button>Add New</Button>
@@ -27,7 +33,7 @@ const TodoContent = () => {
                     </Layout>
                 </Col>
             </Row>
-        </Layout>
+        </Content>
     );
 };
 
