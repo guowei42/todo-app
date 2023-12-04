@@ -1,3 +1,4 @@
+import { Key } from "react";
 import { todoApi } from ".";
 import { TodoInfo } from "../../types/TodoInfo";
 
@@ -8,7 +9,18 @@ const todoInfo = todoApi.injectEndpoints({
                 return "TodoInfo?parent";
             },
         }),
+        getProject: build.query<TodoInfo, Key>({
+            query: (id: Key) => {
+                return `TodoInfo/${id}`;
+            },
+        }),
+        getChildList: build.query<TodoInfo[], Key>({
+            query: (id: Key) => {
+                return `TodoInfo?parent=${id}`;
+            },
+        }),
     }),
 });
 
-export const { useGetProjectsQuery } = todoInfo;
+export const { useGetProjectsQuery, useGetChildListQuery, useGetProjectQuery } =
+    todoInfo;

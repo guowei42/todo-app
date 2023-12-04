@@ -1,4 +1,5 @@
 import { Card } from "antd";
+import { useGetChildListQuery } from "../../../api/todoApi/todoInfo";
 const Roots = [
     {
         id: "72e07c05-ce00-43a6-995d-ec6b05a929ff",
@@ -14,10 +15,11 @@ const Roots = [
     },
 ];
 const TodoList = () => {
+    const {data, isSuccess} = useGetChildListQuery()
     return (
         <>
             {Roots.map((e) => (
-                <div style={{ padding: "20px" }}>
+                <div style={{ padding: "20px" }} key={e.id}>
                     <Card
                         title={e.title}
                         style={{ width: "100%" }}
