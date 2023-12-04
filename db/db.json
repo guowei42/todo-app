@@ -18,8 +18,8 @@
             "id": "22a36016-88c1-48b0-83da-c078ec1c416b",
             "parent": "72e07c05-ce00-43a6-995d-ec6b05a929ff",
             "title":"House Listing",
-            "summary": "",
-            "details": ""
+            "summary": "fetch house listing from server",
+            "details": "houses should be fetched as an array from server"
         },
         {
             "id": "98f33552-bf02-453b-84d5-2bf99b6a3f49",
