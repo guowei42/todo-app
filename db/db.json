@@ -5,7 +5,7 @@
             "parent": "",
             "title":"Project Housing",
             "summary": "displays housing stats",
-            "details": "this project involves performing data stats for housing information \n - idea 1 \n - idea 2 \n \n - idea 4"
+            "details": "<p>perform data stats for housing information</p> <ul><li>idea 1</li><li>idea 2</li></ul>"
         },
         {
             "id": "3cad4b18-47b7-4591-b94e-1d32073649da",

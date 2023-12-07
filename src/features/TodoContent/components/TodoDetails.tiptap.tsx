@@ -1,20 +1,24 @@
-import { BubbleMenu, EditorContent, FloatingMenu, useEditor } from "@tiptap/react";
+import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Card } from "antd";
+import { Key, useEffect } from "react";
 import { useGetProjectQuery } from "../../../api/todoApi/todoInfo";
-import { Key } from "react";
-import "../style/editor.css"
+import "../style/editor.css";
 
 const extensions = [StarterKit];
 
-const content = "<p>Hello World!</p>";
-
 const TodoDetailsTipTap = ({ id }: { id: Key }) => {
-    const { data, isSuccess } = useGetProjectQuery(id);
+    const { data, isSuccess, isLoading} = useGetProjectQuery(id);
     const editor = useEditor({
         extensions,
-        content,
+        content: ""
     });
+    
+    useEffect(() => {
+        if (editor && data) {
+            editor.commands.setContent(data.details);
+        }
+    }, [editor, data]);
 
     return (
         <Card

@@ -1,9 +1,17 @@
 # Todo app
 
-A Todo task tracking and management app that is inspired from issues faced when doing my intern.
+Simple todo tracking and management app, based on Azure's organization for breaking down epics, features, implementation etc.
 
-I found tracking epics and its requirements difficult, especially with excel. What I had to do was break down epics into features, features into requirements, requirements into its detailed steps. I found this nesting really hard to visualize with excel.
+Application Goal:
+- Intuitive for beginners to use
+- Simple and lightweight
 
-While arranging them similar to folders structure will be a better option, this application aims to display folder structures in a more elegant way... or something.
 
-Look, can I use some current note taking app as a substitute for excel and save me however long to make my own one? Yes, yes I can. Leave me alone, I just want to make something I thought is cool.
+Who is this for:
+ - Individuals looking for something quick and easy to start their project's management
+ - Individual projects
+
+
+QNA:
+
+Should I use *<ins>insert alternative app</ins>* instead? - Yes
