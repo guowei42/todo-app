@@ -2,9 +2,8 @@ import { Button, Col, Layout, Row } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import { Key } from "react";
 import { useNavigate, useParams } from "react-router";
-import TodoDetails from "./components/TodoDetails";
-import TodoList from "./components/TodoList";
 import TodoDetailsTipTap from "./components/TodoDetails.tiptap";
+import TodoList from "./components/TodoList";
 
 const TodoContent = () => {
     let { id } = useParams();
