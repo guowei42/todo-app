@@ -19,8 +19,24 @@ const todoInfo = todoApi.injectEndpoints({
                 return `TodoInfo?parent=${id}`;
             },
         }),
+        updateProjectDetail: build.mutation<
+            string,
+            { id: Key; newData: string | null }
+        >({
+            query: ({ id, newData }) => {
+                return {
+                    url: `TodoInfo/${id}`,
+                    method: "PATCH",
+                    body: { details: newData },
+                };
+            },
+        }),
     }),
 });
 
-export const { useGetProjectsQuery, useGetChildListQuery, useGetProjectQuery } =
-    todoInfo;
+export const {
+    useGetProjectsQuery,
+    useGetChildListQuery,
+    useGetProjectQuery,
+    useUpdateProjectDetailMutation,
+} = todoInfo;
