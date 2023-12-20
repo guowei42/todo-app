@@ -1,6 +1,10 @@
 .ProseMirror {
     height: 75vh;
     max-height: 80vh;
+    border: 1px solid black;
+    border-top: none;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 .ProseMirror:focus {

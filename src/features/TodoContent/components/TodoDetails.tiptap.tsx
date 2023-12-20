@@ -1,13 +1,15 @@
-import { SaveTwoTone, EditTwoTone, DeleteTwoTone } from "@ant-design/icons";
+import { DeleteTwoTone, EditTwoTone, SaveOutlined } from "@ant-design/icons";
 import { EditorState } from "@tiptap/pm/state";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Card } from "antd";
+import Meta from "antd/es/card/Meta";
 import { Key, useEffect } from "react";
 import {
     useGetProjectQuery,
     useUpdateProjectDetailMutation,
 } from "../../../api/todoApi/todoInfo";
+import cardStyles from "../style/card.module.css";
 import "../style/editor.css";
 import MenuBar from "./MenuBar.tiptap";
 
@@ -15,7 +17,7 @@ const extensions = [StarterKit];
 
 const TodoDetailsTipTap = ({ id }: { id: Key }) => {
     const { data } = useGetProjectQuery(id);
-    const [updateProjectDetail, result] = useUpdateProjectDetailMutation();
+    const [updateProjectDetail] = useUpdateProjectDetailMutation();
     const editor = useEditor({
         extensions,
         content: "",
@@ -43,19 +45,16 @@ const TodoDetailsTipTap = ({ id }: { id: Key }) => {
     }, [editor, data]);
 
     return (
-        <Card
-            title={data?.title}
-            style={{ border: "2px solid black" }}
-            bordered
-        >
+        <>
             {editor && (
                 <Card
-                    title={<MenuBar editor={editor} />}
+                    title={data?.title}
+                    bodyStyle={{ paddingTop: 0 }}
+                    style={{ border: "2px solid black" }}
                     actions={[
-                        <SaveTwoTone
+                        <SaveOutlined
                             key="save"
-                            style={{ fontSize: "1.5rem" }}
-                            twoToneColor=" #52c41a"
+                            className={`${cardStyles.icon} ${cardStyles.saveIcon}`}
                             onClick={() =>
                                 updateProjectDetail({
                                     id: id,
@@ -63,24 +62,20 @@ const TodoDetailsTipTap = ({ id }: { id: Key }) => {
                                 })
                             }
                         />,
-                        <EditTwoTone
-                            key="edit"
-                            style={{ fontSize: "1.5rem" }}
-                        />,
+                        <EditTwoTone key="edit" className={cardStyles.icon} />,
                         <DeleteTwoTone
                             key="delete"
-                            style={{ fontSize: "1.5rem" }}
+                            className={`${cardStyles.icon} ${cardStyles.deleteIcon}`}
                             twoToneColor="#f5222d"
                         />,
                     ]}
-                    style={{ border: "1px solid black" }}
-                    bodyStyle={{ padding: "0 24px" }}
                     bordered
                 >
+                    <Meta title={<MenuBar editor={editor} />} />
                     <EditorContent editor={editor} />
                 </Card>
             )}
-        </Card>
+        </>
     );
 };
 

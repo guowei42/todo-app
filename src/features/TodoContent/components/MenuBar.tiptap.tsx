@@ -1,7 +1,6 @@
 import { Editor } from "@tiptap/react";
 import { Button } from "antd";
 import styles from "../style/menubar.module.css";
-import { UndoOutlined, RedoOutlined } from "@ant-design/icons";
 
 const MenuBar = ({ editor }: { editor: Editor | null }) => {
     if (!editor) {

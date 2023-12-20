@@ -1,0 +1,31 @@
+.icon {
+    svg {
+        font-size: 1.5rem;
+    }
+}
+
+.saveIcon {
+    svg {
+        color: #52c41a;
+        transition: transform 0.01s ease-in-out;
+    }
+}
+
+.saveIcon:hover {
+    svg {
+        transform: scale(1.2);
+    }
+    transform: scale(1.2);
+}
+
+.saveIcon:active {
+    svg {
+        transform: scale(1);
+    }
+}
+
+.DeleteIcon {
+    svg {
+        color: #f5222d;
+    }
+}
